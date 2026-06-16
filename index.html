@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0b10">
+  <meta name="description" content="WEBXAI — AI automation, WhatsApp API integrations, identity & branding, and full-stack application engineering for ambitious digital products.">
+  <meta name="color-scheme" content="dark">
+  <title>WEBXAI — Premium Digital Engineering</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/favicon.png">
+</head>
+<body class="is-loading">
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-w" id="cursor-w" aria-hidden="true">W</div>
+
+  <!-- ========== LOADER ========== -->
+  <div class="loader" id="loader" aria-hidden="false">
+    <div class="loader__glow" aria-hidden="true"></div>
+    <div class="loader__inner">
+      <div class="loader__word" id="loader-word" aria-hidden="true">
+        <span class="loader__letter">W</span>
+        <span class="loader__letter">E</span>
+        <span class="loader__letter">B</span>
+        <span class="loader__letter">X</span>
+        <span class="loader__letter">A</span>
+        <span class="loader__letter">I</span>
+      </div>
+      <p class="loader__status" id="loader-status">Engineering experience</p>
+      <div class="loader__progress">
+        <div class="loader__progress-bar" id="loader-progress"></div>
+      </div>
+      <p class="loader__percent" id="loader-percent">0%</p>
+    </div>
+  </div>
+
+  <div class="page-transition" id="page-transition" aria-hidden="true"></div>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="nav" id="main-nav">
+    <div class="container nav__inner">
+      <a href="#" class="nav__logo" data-page="home">WEB<span>XAI</span></a>
+      <div class="nav__links" id="nav-links">
+        <a href="#" class="nav__link active" data-page="home">Home</a>
+        <a href="#" class="nav__link" data-page="services">Services</a>
+        <a href="#" class="nav__link" data-page="portfolio">Portfolio</a>
+        <a href="#" class="nav__link" data-page="about">About</a>
+        <a href="#" class="nav__link" data-page="contact">Contact</a>
+        <button class="nav__cta cta-btn cta-btn--nav" data-page="contact">Start a Project</button>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="nav__mobile" id="mobile-nav">
+    <a href="#" class="nav__link" data-page="home">Home</a>
+    <a href="#" class="nav__link" data-page="services">Services</a>
+    <a href="#" class="nav__link" data-page="portfolio">Portfolio</a>
+    <a href="#" class="nav__link" data-page="about">About</a>
+    <a href="#" class="nav__link" data-page="contact">Contact</a>
+    <button class="nav__cta cta-btn cta-btn--nav" data-page="contact">Start a Project</button>
+  </div>
+
+  <!-- ========== HOME PAGE ========== -->
+  <main class="page active" id="page-home">
+
+    <!-- Hero -->
+    <section class="hero" id="hero-section">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__ambient hero__ambient--1"></div>
+        <div class="hero__ambient hero__ambient--2"></div>
+        <div class="hero__spotlight"></div>
+        <div class="hero__grid"></div>
+      </div>
+      <div class="hero__particles" id="particles"></div>
+      <div class="hero__content">
+        <p class="hero__eyebrow">Digital Engineering Studio</p>
+        <div class="hero__title-wrap">
+          <div class="hero__ghost" aria-hidden="true">
+            <div class="hero__ghost-smoke"></div>
+            <span class="hero__ghost-text">WEBXAI</span>
+          </div>
+          <h1 class="hero__title" aria-label="WEBXAI">
+            <span class="hero__letter">W</span><span class="hero__letter">E</span><span class="hero__letter">B</span><span class="hero__letter">X</span><span class="hero__letter">A</span><span class="hero__letter">I</span>
+          </h1>
+        </div>
+        <p class="hero__tagline">Digital products engineered for performance, clarity, and scale.</p>
+        <div class="hero__actions">
+          <button class="cta-btn cta-btn--hero" data-page="contact" id="hero-cta">Get Started</button>
+          <button class="cta-btn cta-btn--outline" data-page="portfolio" id="hero-work-cta">View Work</button>
+        </div>
+      </div>
+      <div class="hero__scroll" aria-hidden="true">
+        <span class="hero__scroll-text">Scroll</span>
+        <span class="hero__scroll-line"></span>
+      </div>
+    </section>
+
+    <!-- Credibility Ticker -->
+    <section class="ticker" id="ticker-section" aria-label="Technology partners">
+      <div class="container ticker__header">
+        <p class="section-label">Technology Stack</p>
+        <p class="ticker__caption">Built with industry-leading tools</p>
+      </div>
+      <div class="ticker__viewport">
+        <div class="ticker__track" id="ticker-track">
+          <div class="ticker__chip" style="--accent:#61DAFB"><span class="ticker__glyph" aria-hidden="true">R</span>React</div>
+          <div class="ticker__chip" style="--accent:#ffffff"><span class="ticker__glyph" aria-hidden="true">N</span>Next.js</div>
+          <div class="ticker__chip" style="--accent:#68A063"><span class="ticker__glyph" aria-hidden="true">N</span>Node.js</div>
+          <div class="ticker__chip" style="--accent:#3178C6"><span class="ticker__glyph" aria-hidden="true">TS</span>TypeScript</div>
+          <div class="ticker__chip" style="--accent:#3776AB"><span class="ticker__glyph" aria-hidden="true">Py</span>Python</div>
+          <div class="ticker__chip" style="--accent:#FF6F00"><span class="ticker__glyph" aria-hidden="true">TF</span>TensorFlow</div>
+          <div class="ticker__chip" style="--accent:#FF9900"><span class="ticker__glyph" aria-hidden="true">A</span>AWS</div>
+          <div class="ticker__chip" style="--accent:#F24E1E"><span class="ticker__glyph" aria-hidden="true">F</span>Figma</div>
+          <div class="ticker__chip" style="--accent:#2496ED"><span class="ticker__glyph" aria-hidden="true">D</span>Docker</div>
+          <div class="ticker__chip" style="--accent:#4169E1"><span class="ticker__glyph" aria-hidden="true">PG</span>PostgreSQL</div>
+          <div class="ticker__chip" style="--accent:#E10098"><span class="ticker__glyph" aria-hidden="true">G</span>GraphQL</div>
+          <div class="ticker__chip" style="--accent:#38BDF8"><span class="ticker__glyph" aria-hidden="true">TW</span>Tailwind CSS</div>
+          <div class="ticker__chip" style="--accent:#61DAFB"><span class="ticker__glyph" aria-hidden="true">R</span>React</div>
+          <div class="ticker__chip" style="--accent:#ffffff"><span class="ticker__glyph" aria-hidden="true">N</span>Next.js</div>
+          <div class="ticker__chip" style="--accent:#68A063"><span class="ticker__glyph" aria-hidden="true">N</span>Node.js</div>
+          <div class="ticker__chip" style="--accent:#3178C6"><span class="ticker__glyph" aria-hidden="true">TS</span>TypeScript</div>
+          <div class="ticker__chip" style="--accent:#3776AB"><span class="ticker__glyph" aria-hidden="true">Py</span>Python</div>
+          <div class="ticker__chip" style="--accent:#FF6F00"><span class="ticker__glyph" aria-hidden="true">TF</span>TensorFlow</div>
+          <div class="ticker__chip" style="--accent:#FF9900"><span class="ticker__glyph" aria-hidden="true">A</span>AWS</div>
+          <div class="ticker__chip" style="--accent:#F24E1E"><span class="ticker__glyph" aria-hidden="true">F</span>Figma</div>
+          <div class="ticker__chip" style="--accent:#2496ED"><span class="ticker__glyph" aria-hidden="true">D</span>Docker</div>
+          <div class="ticker__chip" style="--accent:#4169E1"><span class="ticker__glyph" aria-hidden="true">PG</span>PostgreSQL</div>
+          <div class="ticker__chip" style="--accent:#E10098"><span class="ticker__glyph" aria-hidden="true">G</span>GraphQL</div>
+          <div class="ticker__chip" style="--accent:#38BDF8"><span class="ticker__glyph" aria-hidden="true">TW</span>Tailwind CSS</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats" aria-label="Agency metrics">
+      <div class="container">
+        <div class="stats__grid">
+          <div class="stats__item reveal">
+            <p class="stats__value" data-count="48">0</p>
+            <p class="stats__label">Projects Delivered</p>
+          </div>
+          <div class="stats__item reveal reveal-delay-1">
+            <p class="stats__value" data-count="12">0</p>
+            <p class="stats__label">Industries Served</p>
+          </div>
+          <div class="stats__item reveal reveal-delay-2">
+            <p class="stats__value" data-count="99" data-suffix="%">0</p>
+            <p class="stats__label">Client Retention</p>
+          </div>
+          <div class="stats__item reveal reveal-delay-3">
+            <p class="stats__value" data-count="24" data-suffix="hr">0</p>
+            <p class="stats__label">Avg. Response Time</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Project -->
+    <section class="featured" id="featured-section">
+      <div class="container">
+        <div class="featured__inner">
+          <div class="featured__image featured__image--manga reveal" data-project="0" role="button" tabindex="0" aria-label="View NRC Group case study">
+            <div class="featured__image-glow" aria-hidden="true"></div>
+            <div class="manga-frame" aria-hidden="true"></div>
+            <img class="manga-img" src="assets/images/portfolio-nrc-agro-manga.png" alt="NRC Group — Agri Supply Chain" width="640" height="400" loading="lazy">
+          </div>
+          <div class="featured__content reveal reveal-delay-2">
+            <p class="featured__label">Recent Project</p>
+            <h2 class="featured__title">NRC Group — Agri Supply Chain</h2>
+            <p class="featured__brief">A premium corporate website for South India's integrated fresh and frozen food distribution group — showcasing three business verticals, institutional partners, and scale across Chennai's Koyambedu Market.</p>
+            <p class="featured__metric">↗ 25+ tonnes traded daily · 200T cold storage · 365 days active</p>
+            <div class="featured__tags">
+              <span>Web Design</span>
+              <span>Brand Identity</span>
+              <span>Multi-vertical</span>
+            </div>
+            <div class="featured__actions">
+              <button class="cta-btn featured__cta" id="featured-cta">View Case Study</button>
+              <a href="https://nrcagro.com/" class="cta-btn cta-btn--outline featured__live" target="_blank" rel="noopener noreferrer">Visit Live Site</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials-section">
+      <div class="container">
+        <div class="testimonials__header reveal">
+          <p class="section-label">Client Voices</p>
+          <h2 class="testimonials__title">Trusted by teams<br>who ship.</h2>
+        </div>
+        <div class="testimonials__grid">
+          <blockquote class="testimonial reveal reveal-delay-1">
+            <p class="testimonial__quote">"WEBXAI built a website that communicates our scale — 25+ tonnes daily across three verticals — without feeling corporate or cold. Partner enquiries from HoReCa and Q-commerce clients picked up within weeks of launch."</p>
+            <footer class="testimonial__author">
+              <span class="testimonial__name">Ramesh N.</span>
+              <span class="testimonial__role">Director, NRC Group</span>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial reveal reveal-delay-2">
+            <p class="testimonial__quote">"The WhatsApp shop they engineered lets customers browse categories, build a cart, and place orders in minutes — no app download needed. It's quickly become one of our strongest sales channels."</p>
+            <footer class="testimonial__author">
+              <span class="testimonial__name">Priya K.</span>
+              <span class="testimonial__role">Head of Operations, NRC Fresh Cuts</span>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial reveal reveal-delay-3">
+            <p class="testimonial__quote">"They understood agri supply chain complexity from day one — cold storage, multi-state sourcing, institutional partners. The digital presence finally matches the operation we've built on the ground."</p>
+            <footer class="testimonial__author">
+              <span class="testimonial__name">Arun V.</span>
+              <span class="testimonial__role">Managing Partner, NA RC Agro</span>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Preview -->
+    <section class="work-preview" id="work-preview-section">
+      <div class="container">
+        <div class="work-preview__header reveal">
+          <div>
+            <p class="section-label">Selected Work</p>
+            <h2 class="work-preview__title">Recent engagements.</h2>
+          </div>
+          <button class="work-preview__link" data-page="portfolio">All Projects →</button>
+        </div>
+        <div class="work-preview__grid">
+          <article class="work-card reveal reveal-delay-1" data-project="0" tabindex="0">
+            <div class="work-card__image work-card__image--manga">
+              <div class="manga-frame" aria-hidden="true"></div>
+              <img class="manga-img" src="assets/images/portfolio-nrc-agro-manga.png" alt="NRC Group" width="400" height="250" loading="lazy">
+            </div>
+            <div class="work-card__body">
+              <p class="work-card__cat">Agri Supply Chain</p>
+              <h3 class="work-card__name">NRC Group</h3>
+              <p class="work-card__metric">↗ 25+ tonnes traded daily</p>
+            </div>
+          </article>
+          <article class="work-card reveal reveal-delay-2" data-project="1" tabindex="0">
+            <div class="work-card__image work-card__image--manga">
+              <div class="manga-frame" aria-hidden="true"></div>
+              <img class="manga-img" src="assets/images/portfolio-nrc-freshcuts-manga.png" alt="NRC Fresh Cuts WhatsApp Shop" width="400" height="250" loading="lazy">
+            </div>
+            <div class="work-card__body">
+              <p class="work-card__cat">WhatsApp Commerce</p>
+              <h3 class="work-card__name">NRC Fresh Cuts</h3>
+              <p class="work-card__metric">↗ Order-on-WhatsApp storefront</p>
+            </div>
+          </article>
+          <article class="work-card reveal reveal-delay-3" data-project="2" tabindex="0">
+            <div class="work-card__image work-card__image--manga">
+              <div class="manga-frame" aria-hidden="true"></div>
+              <img class="manga-img" src="assets/images/portfolio-logixai-manga.png" alt="LogixAI" width="400" height="250" loading="lazy">
+            </div>
+            <div class="work-card__body">
+              <p class="work-card__cat">Logistics Automation</p>
+              <h3 class="work-card__name">LogixAI</h3>
+              <p class="work-card__metric">↗ 40% faster processing</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Home Footer / Final Pitch -->
+    <section class="home-footer home-footer--premium">
+      <div class="home-footer__glow" aria-hidden="true"></div>
+      <div class="container">
+        <div class="reveal">
+          <p class="section-label section-label--center">Let's Collaborate</p>
+          <h2 class="home-footer__title">Ready to build the<br>next generation?</h2>
+          <p class="home-footer__desc">Partner with a studio that engineers products with precision, speed, and long-term scale in mind.</p>
+          <button class="cta-btn" data-page="contact" id="footer-cta">Get Started</button>
+        </div>
+        <div class="home-footer__links">
+          <a href="#" data-page="services">Services</a>
+          <a href="#" data-page="portfolio">Portfolio</a>
+          <a href="#" data-page="about">About</a>
+          <a href="#" data-page="contact">Contact</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ========== SERVICES PAGE ========== -->
+  <main class="page" id="page-services">
+
+    <header class="page-header">
+      <div class="container">
+        <h1 class="page-header__title reveal">CAPABILITIES.</h1>
+        <p class="page-header__subtitle reveal reveal-delay-1">Four core capabilities — AI automation, WhatsApp messaging, brand identity, and full-stack engineering. Each service is delivered end-to-end, from strategy through production.</p>
+      </div>
+    </header>
+
+    <section class="services-intro">
+      <div class="container">
+        <p class="services-intro__text reveal">We don't offer generic packages. Every engagement is scoped around your product goals — whether you need an intelligent agent layer, a customer messaging pipeline, a brand system that scales, or a complete application built to perform under real traffic.</p>
+      </div>
+    </section>
+
+    <!-- Service Pillars -->
+    <section class="service-pillars">
+      <div class="container">
+
+        <div class="pillar reveal">
+          <span class="pillar__index" aria-hidden="true">01</span>
+          <div class="pillar__content">
+            <h2 class="pillar__title">AI & Automation</h2>
+            <p class="pillar__text">We architect autonomous agents, neural workflows, and custom LLM integrations that streamline operations and drive automated growth. From internal copilots to customer-facing intelligence, we embed AI where it creates measurable impact — not novelty.</p>
+            <ul class="pillar__includes">
+              <li>Custom GPT & LLM integrations (OpenAI, Anthropic, Gemini)</li>
+              <li>Autonomous agents for support, ops, and data processing</li>
+              <li>RAG pipelines, document Q&A, and knowledge bases</li>
+              <li>Workflow automation connecting your existing tools</li>
+              <li>Prompt engineering, fine-tuning strategy, and guardrails</li>
+            </ul>
+            <div class="pillar__tags">
+              <span class="tag">LLM Integration</span>
+              <span class="tag">AI Agents</span>
+              <span class="tag">RAG Systems</span>
+              <span class="tag">Workflow Automation</span>
+              <span class="tag">Chatbots</span>
+            </div>
+          </div>
+          <div class="pillar__visual pillar__visual--manga">
+            <div class="pillar__manga-frame" aria-hidden="true"></div>
+            <img class="pillar__img pillar__img--manga" src="assets/images/service-ai-manga.png" alt="Manga illustration for AI and automation" width="360" height="270" loading="lazy">
+          </div>
+        </div>
+
+        <div class="pillar reveal">
+          <span class="pillar__index" aria-hidden="true">02</span>
+          <div class="pillar__content">
+            <h2 class="pillar__title">WhatsApp API</h2>
+            <p class="pillar__text">We design transactional messaging setups, smart bot flows, and custom communication endpoints that connect you instantly with your audience. Whether it's order updates, lead qualification, or support at scale — we build WhatsApp experiences that feel native and convert.</p>
+            <ul class="pillar__includes">
+              <li>WhatsApp Business API setup and Meta verification</li>
+              <li>Template messages, notifications, and OTP flows</li>
+              <li>Conversational bots with human handoff logic</li>
+              <li>CRM, payment gateway, and webhook integrations</li>
+              <li>Analytics, delivery tracking, and compliance setup</li>
+            </ul>
+            <div class="pillar__tags">
+              <span class="tag">Business API</span>
+              <span class="tag">Bot Flows</span>
+              <span class="tag">Templates</span>
+              <span class="tag">CRM Integration</span>
+              <span class="tag">Webhooks</span>
+            </div>
+          </div>
+          <div class="pillar__visual pillar__visual--manga">
+            <div class="pillar__manga-frame" aria-hidden="true"></div>
+            <img class="pillar__img pillar__img--manga" src="assets/images/service-whatsapp-manga.png" alt="Manga illustration for WhatsApp API" width="360" height="270" loading="lazy">
+          </div>
+        </div>
+
+        <div class="pillar reveal">
+          <span class="pillar__index" aria-hidden="true">03</span>
+          <div class="pillar__content">
+            <h2 class="pillar__title">Identity & Branding</h2>
+            <p class="pillar__text">We develop cohesive design systems, minimalist typographic assets, and brand strategies that leave an indelible mark in a digital-first world. Your identity should work everywhere — from a landing page to a product dashboard to a pitch deck.</p>
+            <ul class="pillar__includes">
+              <li>Logo design, wordmarks, and visual identity systems</li>
+              <li>Typography, color palettes, and spacing tokens</li>
+              <li>Figma design systems with reusable components</li>
+              <li>Brand guidelines and asset libraries for your team</li>
+              <li>UI kits, social templates, and marketing collateral</li>
+            </ul>
+            <div class="pillar__tags">
+              <span class="tag">Figma</span>
+              <span class="tag">Design Systems</span>
+              <span class="tag">Brand Strategy</span>
+              <span class="tag">Logo Design</span>
+              <span class="tag">UI Kits</span>
+            </div>
+          </div>
+          <div class="pillar__visual pillar__visual--manga">
+            <div class="pillar__manga-frame" aria-hidden="true"></div>
+            <img class="pillar__img pillar__img--manga" src="assets/images/service-branding-manga.png" alt="Manga illustration for identity and branding" width="360" height="270" loading="lazy">
+          </div>
+        </div>
+
+        <div class="pillar reveal">
+          <span class="pillar__index" aria-hidden="true">04</span>
+          <div class="pillar__content">
+            <h2 class="pillar__title">Full Stack Applications</h2>
+            <p class="pillar__text">We engineer robust, performant web, mobile, and desktop systems from database schemas to immersive frontends with absolute precision. Production-ready architecture, clean APIs, and interfaces built for speed — not prototypes that break at scale.</p>
+            <ul class="pillar__includes">
+              <li>Web apps with React, Next.js, and modern frontends</li>
+              <li>REST & GraphQL APIs, auth, and role-based access</li>
+              <li>PostgreSQL, MongoDB, and cloud database design</li>
+              <li>Mobile-responsive UI and progressive web apps</li>
+              <li>CI/CD, hosting, monitoring, and post-launch support</li>
+            </ul>
+            <div class="pillar__tags">
+              <span class="tag">React</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">GraphQL</span>
+            </div>
+          </div>
+          <div class="pillar__visual pillar__visual--manga">
+            <div class="pillar__manga-frame" aria-hidden="true"></div>
+            <img class="pillar__img pillar__img--manga" src="assets/images/service-fullstack-manga.png" alt="Manga illustration for full stack applications" width="360" height="270" loading="lazy">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Process Timeline -->
+    <section class="process" id="process-section">
+      <div class="container">
+        <div class="process__header reveal">
+          <p class="bento__label">How We Operate</p>
+          <h2 class="process__title">The Operational Process</h2>
+        </div>
+        <div class="process__track">
+          <div class="process__step reveal reveal-delay-1">
+            <p class="process__step-number">01</p>
+            <h3 class="process__step-title">Discovery</h3>
+            <p class="process__step-text">Mapping out architecture and business goals. Understanding user flows, competitive landscapes, and technical requirements.</p>
+          </div>
+          <div class="process__step reveal reveal-delay-2">
+            <p class="process__step-number">02</p>
+            <h3 class="process__step-title">Interface</h3>
+            <p class="process__step-text">Generating high-fidelity visual wireframes. Iterating on designs with rapid prototyping and user testing feedback loops.</p>
+          </div>
+          <div class="process__step reveal reveal-delay-3">
+            <p class="process__step-number">03</p>
+            <h3 class="process__step-title">Engineering</h3>
+            <p class="process__step-text">Writing clean, modular code with smooth animations. Building robust APIs and integrating third-party services seamlessly.</p>
+          </div>
+          <div class="process__step reveal reveal-delay-4">
+            <p class="process__step-number">04</p>
+            <h3 class="process__step-title">Deployment</h3>
+            <p class="process__step-text">Rigorous testing, speed optimization, and production launch. CI/CD pipelines, monitoring, and post-launch support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="bottom-cta">
+      <div class="container reveal">
+        <h2 class="bottom-cta__title">Have a vision in mind?<br>Let's engineer it.</h2>
+        <button class="cta-btn" data-page="contact">Get Started</button>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ========== PORTFOLIO PAGE ========== -->
+  <main class="page" id="page-portfolio">
+
+    <header class="page-header">
+      <div class="container">
+        <h1 class="page-header__title reveal">SELECTED WORK.</h1>
+        <p class="page-header__subtitle reveal reveal-delay-1">A gallery of premium digital products engineered to perform.</p>
+      </div>
+    </header>
+
+    <!-- Filterable Grid -->
+    <section class="container portfolio-section">
+      <div class="portfolio-filters reveal">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="agri">Agri-Tech</button>
+        <button class="filter-btn" data-filter="whatsapp">WhatsApp</button>
+        <button class="filter-btn" data-filter="automation">Automation</button>
+        <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+        <button class="filter-btn" data-filter="saas">SaaS</button>
+      </div>
+
+      <div class="project-grid" id="project-grid">
+
+        <div class="project-card reveal" data-category="agri landing" data-project="0">
+          <div class="project-card__image project-card__image--manga">
+            <div class="manga-frame" aria-hidden="true"></div>
+            <img class="manga-img" src="assets/images/portfolio-nrc-agro-manga.png" alt="NRC Group — Agri Supply Chain manga panel" width="640" height="400" loading="lazy">
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__category">Agri Supply Chain</p>
+            <h3 class="project-card__name">NRC Group — Corporate Website</h3>
+            <p class="project-card__metric">↗ 25+ Tonnes Traded Daily</p>
+          </div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-1" data-category="whatsapp ecommerce agri" data-project="1">
+          <div class="project-card__image project-card__image--manga">
+            <div class="manga-frame" aria-hidden="true"></div>
+            <img class="manga-img" src="assets/images/portfolio-nrc-freshcuts-manga.png" alt="NRC Fresh Cuts WhatsApp Shop manga panel" width="640" height="400" loading="lazy">
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__category">WhatsApp Commerce</p>
+            <h3 class="project-card__name">NRC Fresh Cuts — WhatsApp Shop</h3>
+            <p class="project-card__metric">↗ Browse, Cart &amp; Order on WhatsApp</p>
+          </div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-2" data-category="automation" data-project="2">
+          <div class="project-card__image project-card__image--manga">
+            <div class="manga-frame" aria-hidden="true"></div>
+            <img class="manga-img" src="assets/images/portfolio-logixai-manga.png" alt="LogixAI manga panel" width="640" height="400" loading="lazy">
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__category">Logistics Automation</p>
+            <h3 class="project-card__name">LogixAI — Logistics Intelligence</h3>
+            <p class="project-card__metric">↗ 40% Faster Processing Speeds</p>
+          </div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-3" data-category="ecommerce" data-project="3">
+          <div class="project-card__image project-card__image--manga">
+            <div class="manga-frame" aria-hidden="true"></div>
+            <img class="manga-img" src="assets/images/portfolio-velo-manga.png" alt="VELO Marketplace manga panel" width="640" height="400" loading="lazy">
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__category">E-Commerce Platform</p>
+            <h3 class="project-card__name">VELO — Premium Marketplace</h3>
+            <p class="project-card__metric">↗ 2.8x Conversion Rate Increase</p>
+          </div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-4" data-category="saas" data-project="4">
+          <div class="project-card__image project-card__image--manga">
+            <div class="manga-frame" aria-hidden="true"></div>
+            <img class="manga-img" src="assets/images/portfolio-nexus-manga.png" alt="Nexus AI manga panel" width="640" height="400" loading="lazy">
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__category">SaaS Platform</p>
+            <h3 class="project-card__name">Nexus AI — Analytics Engine</h3>
+            <p class="project-card__metric">↗ 12k+ Active Users in 90 Days</p>
+          </div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-5" data-category="landing agri" data-project="5">
+          <div class="project-card__image project-card__image--manga">
+            <div class="manga-frame" aria-hidden="true"></div>
+            <img class="manga-img" src="assets/images/portfolio-harvest-manga.png" alt="Harvest OS manga panel" width="640" height="400" loading="lazy">
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__category">Agricultural Technology</p>
+            <h3 class="project-card__name">Harvest OS — Crop Logistics</h3>
+            <p class="project-card__metric">↗ Automated Crop Logistics Tracking</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- Case Study Overlay (body-level so fixed scroll works) -->
+  <div class="case-study-overlay" id="case-study-overlay" aria-hidden="true">
+    <div class="case-study" role="dialog" aria-modal="true" aria-labelledby="cs-title">
+      <button class="case-study__close" id="case-study-close" aria-label="Close case study">×</button>
+      <div class="case-study__image" id="cs-image"></div>
+      <h2 class="case-study__title" id="cs-title"></h2>
+      <p class="case-study__category" id="cs-category"></p>
+      <div class="case-study__section">
+        <h3 class="case-study__section-title">The Challenge</h3>
+        <p class="case-study__section-text" id="cs-challenge"></p>
+      </div>
+      <div class="case-study__section">
+        <h3 class="case-study__section-title">The Solution</h3>
+        <p class="case-study__section-text" id="cs-solution"></p>
+      </div>
+      <div class="case-study__section">
+        <h3 class="case-study__section-title">The Result</h3>
+        <p class="case-study__section-text" id="cs-result"></p>
+      </div>
+      <a href="#" class="cta-btn case-study__live" id="cs-live" target="_blank" rel="noopener noreferrer" hidden>Visit Live Site</a>
+    </div>
+  </div>
+
+
+  <!-- ========== ABOUT PAGE ========== -->
+  <main class="page" id="page-about">
+
+    <header class="page-header">
+      <div class="container">
+        <h1 class="page-header__title reveal">WHO WE ARE.</h1>
+        <p class="page-header__subtitle reveal reveal-delay-1">A digital engineering studio focused on AI, communication, identity, and full-stack product delivery.</p>
+      </div>
+    </header>
+
+    <!-- Intro -->
+    <section class="manifesto">
+      <div class="container">
+        <p class="manifesto__text reveal">We are a digital engineering studio obsessed with building products that feel inevitable — intelligent, fast, and unmistakably yours.</p>
+        <p class="about-body reveal reveal-delay-1">WEBXAI exists at the intersection of automation, communication, identity, and full-stack craft. We partner with founders and teams who refuse to ship mediocre work, and we treat every engagement like a long-term product — not a one-off deliverable.</p>
+        <p class="about-body reveal reveal-delay-2">From autonomous AI agents that eliminate repetitive ops, to WhatsApp flows that reach customers in seconds, to brand systems that hold up at scale — we engineer the full stack of what modern businesses actually need to grow.</p>
+      </div>
+    </section>
+
+    <!-- Core Focus -->
+    <section class="about-focus">
+      <div class="container">
+        <p class="about-focus__title reveal">What We Deliver</p>
+        <div class="about-focus__list">
+          <div class="about-focus__item reveal reveal-delay-1">
+            <strong>AI & Automation</strong>
+            <span>Custom LLM integrations, autonomous agents, RAG knowledge bases, and workflow automation. We connect AI to your product and internal tools so repetitive work disappears and your team focuses on high-value decisions.</span>
+          </div>
+          <div class="about-focus__item reveal reveal-delay-2">
+            <strong>WhatsApp API</strong>
+            <span>WhatsApp Business API setup, template messaging, conversational bots, OTP flows, and CRM integrations. Reach customers instantly on the world's most-used messaging platform — compliant, reliable, and built to convert.</span>
+          </div>
+          <div class="about-focus__item reveal reveal-delay-3">
+            <strong>Identity & Branding</strong>
+            <span>Logo design, Figma design systems, typography, color tokens, and brand guidelines. We craft identities that scale across websites, apps, marketing, and pitch materials without losing coherence.</span>
+          </div>
+          <div class="about-focus__item reveal reveal-delay-4">
+            <strong>Full Stack Applications</strong>
+            <span>React and Next.js frontends, Node.js APIs, PostgreSQL databases, authentication, and CI/CD deployment. From MVP to production systems handling real traffic — engineered with precision, not shortcuts.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section class="about-story">
+      <div class="container">
+        <h2 class="about-story__title reveal">Why WEBXAI Exists</h2>
+        <div class="about-story__grid">
+          <p class="about-body reveal reveal-delay-1">Most agencies sell templates. Most dev shops ship features without thinking about brand. Most designers hand off files that engineers can't build. We built WEBXAI to close that gap — one studio that owns the entire journey from strategy to production.</p>
+          <p class="about-body reveal reveal-delay-2">We believe the best digital products are quiet in their confidence: fast load times, clear interfaces, intelligent backends, and identities that don't need to shout to be remembered. That philosophy shapes every line of code and every pixel we place.</p>
+          <p class="about-body reveal reveal-delay-3">Whether you're launching a new venture or modernizing a legacy platform, we embed directly into your goals — translating ambition into architecture, and architecture into something your users love to use.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="about-values">
+      <div class="container">
+        <h2 class="about-values__title reveal">What We Stand For</h2>
+        <div class="about-values__grid">
+          <article class="about-values__card reveal reveal-delay-1">
+            <h3>Precision Over Noise</h3>
+            <p>We cut scope creep, avoid trend-chasing, and focus on what moves the needle. Every sprint has a purpose; every design decision has a reason.</p>
+          </article>
+          <article class="about-values__card reveal reveal-delay-2">
+            <h3>Speed Without Sacrifice</h3>
+            <p>Rapid delivery doesn't mean sloppy code. We ship fast because our systems, components, and processes are built for repeatability — not reinvention on every project.</p>
+          </article>
+          <article class="about-values__card reveal reveal-delay-3">
+            <h3>Partnership, Not Handoffs</h3>
+            <p>You get direct access to the people building your product. No account-manager telephone game — just clear communication, honest timelines, and work you can trust.</p>
+          </article>
+          <article class="about-values__card reveal reveal-delay-4">
+            <h3>Built To Last</h3>
+            <p>We write code and craft brands that survive growth spurts, team changes, and platform shifts. What we deliver today should still feel right twelve months from now.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Philosophy Grid -->
+    <section class="philosophy">
+      <div class="container">
+        <h2 class="philosophy__title reveal">How We Work</h2>
+        <p class="about-body about-body--lead reveal reveal-delay-1">Our process is deliberately simple: understand deeply, design intentionally, engineer rigorously, and launch with confidence. No bloated phases, no mystery invoices — just momentum toward something remarkable.</p>
+        <div class="philosophy__grid">
+          <div class="philosophy__card reveal reveal-delay-1">
+            <h3 class="philosophy__card-title">Discover & Align</h3>
+            <p class="philosophy__card-text">We map your goals, users, and technical landscape before a single mockup ships. Alignment upfront saves months of rework downstream.</p>
+          </div>
+          <div class="philosophy__card reveal reveal-delay-2">
+            <h3 class="philosophy__card-title">Design With Intent</h3>
+            <p class="philosophy__card-text">Interfaces and identities are crafted to communicate — not decorate. Every layout is tested against clarity, conversion, and brand coherence.</p>
+          </div>
+          <div class="philosophy__card reveal reveal-delay-3">
+            <h3 class="philosophy__card-title">Engineer For Scale</h3>
+            <p class="philosophy__card-text">Clean architecture, observable systems, and performance budgets baked in from day one. Your product should feel fast on launch day and on launch year.</p>
+          </div>
+          <div class="philosophy__card reveal reveal-delay-4">
+            <h3 class="philosophy__card-title">Launch & Evolve</h3>
+            <p class="philosophy__card-text">We don't disappear after deploy. Monitoring, iteration, and post-launch optimization keep your platform sharp as usage grows.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proof -->
+    <section class="about-proof">
+      <div class="container">
+        <p class="about-proof__text reveal">Trusted by teams who need AI automation, real-time messaging, premium identity work, and full-stack products that perform under pressure — delivered with the rigor of an in-house engineering org and the taste of a world-class design studio.</p>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="bottom-cta">
+      <div class="container reveal">
+        <h2 class="bottom-cta__title">Let's build something<br>remarkable together.</h2>
+        <button class="cta-btn" data-page="contact">Get Started</button>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ========== CONTACT PAGE ========== -->
+  <main class="page" id="page-contact">
+
+    <header class="page-header">
+      <div class="container">
+        <h1 class="page-header__title reveal">START A PROJECT.</h1>
+        <p class="page-header__subtitle reveal reveal-delay-1">Let's align on goals and build something exceptional together.</p>
+      </div>
+    </header>
+
+    <!-- Contact Layout -->
+    <section class="contact-layout">
+      <div class="container contact-layout__wrap">
+
+        <aside class="contact-panel contact-panel--info reveal">
+          <p class="contact-panel__eyebrow">Get in touch</p>
+          <h2 class="contact-panel__title">Let's align on your next build.</h2>
+          <p class="contact-panel__text">Share your goals, timeline, and scope — we'll respond with a clear technical plan within one business day.</p>
+
+          <div class="contact-panel__list">
+            <div class="contact-panel__item">
+              <p class="contact-panel__label">Phone</p>
+              <a href="tel:+916360334274" class="contact-panel__value">+91 6360 334 274</a>
+            </div>
+            <div class="contact-panel__item">
+              <p class="contact-panel__label">WhatsApp</p>
+              <a href="#" data-whatsapp data-whatsapp-use-form class="contact-panel__value contact-panel__value--whatsapp">Message us on WhatsApp</a>
+            </div>
+            <div class="contact-panel__item">
+              <p class="contact-panel__label">Response Time</p>
+              <p class="contact-panel__value contact-panel__value--static">Within 24 business hours</p>
+            </div>
+            <div class="contact-panel__item">
+              <p class="contact-panel__label">Services</p>
+              <p class="contact-panel__value contact-panel__value--static">AI & Automation · WhatsApp API · Identity & Branding · Full Stack Apps</p>
+            </div>
+            <div class="contact-panel__item contact-panel__item--detail">
+              <p class="contact-panel__label">What we build</p>
+              <p class="contact-panel__detail">LLM agents, WhatsApp bots, design systems, React/Next.js apps, APIs, and automation pipelines — scoped to your goals.</p>
+            </div>
+          </div>
+
+          <a href="#" data-whatsapp data-whatsapp-use-form class="cta-btn cta-btn--whatsapp" aria-label="Chat on WhatsApp">
+            <svg class="cta-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.883 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat on WhatsApp
+          </a>
+        </aside>
+
+        <div class="contact-panel contact-panel--form reveal reveal-delay-1">
+          <form class="contact-form" id="contact-form">
+
+            <div class="form-group">
+              <label for="contact-name">Name / Company</label>
+              <input type="text" id="contact-name" name="name" placeholder="Your name or company" required autocomplete="organization">
+            </div>
+
+            <div class="form-group">
+              <label>Project Scope</label>
+              <div class="scope-tags" id="scope-tags">
+                <button type="button" class="scope-tag" data-scope="AI & Automation">AI & Automation</button>
+                <button type="button" class="scope-tag" data-scope="WhatsApp API">WhatsApp API</button>
+                <button type="button" class="scope-tag" data-scope="Identity & Branding">Identity & Branding</button>
+                <button type="button" class="scope-tag" data-scope="Full Stack Applications">Full Stack Applications</button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-brief">Project Brief</label>
+              <textarea id="contact-brief" name="brief" placeholder="Tell us about your project, goals, and timeline..." rows="5"></textarea>
+            </div>
+
+            <div class="contact-form__actions">
+              <button type="submit" class="cta-btn cta-btn--whatsapp" id="submit-btn">
+                <svg class="cta-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.883 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Send via WhatsApp
+              </button>
+              <p class="contact-form__note">Your brief is sent as a WhatsApp message to our team. We reply within 24 business hours.</p>
+            </div>
+          </form>
+
+          <div class="form-success" id="form-success">
+            <div class="form-success__icon">✓</div>
+            <h3 class="form-success__title">WhatsApp Opened</h3>
+            <p class="form-success__text">Send the pre-filled message to complete your brief. Our team will respond within 24 business hours.</p>
+            <a href="#" data-whatsapp data-whatsapp-use-form class="cta-btn cta-btn--whatsapp form-success__whatsapp">Open WhatsApp again</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== SITE FOOTER ========== -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a href="#" class="site-footer__logo" data-page="home">WEB<span>XAI</span></a>
+          <p class="site-footer__tagline">Premium digital engineering for ambitious teams building the next generation of web products.</p>
+        </div>
+        <nav class="site-footer__nav" aria-label="Footer navigation">
+          <p class="site-footer__heading">Navigate</p>
+          <a href="#" data-page="home">Home</a>
+          <a href="#" data-page="services">Services</a>
+          <a href="#" data-page="portfolio">Portfolio</a>
+          <a href="#" data-page="about">About</a>
+          <a href="#" data-page="contact">Contact</a>
+        </nav>
+        <nav class="site-footer__services" aria-label="Services">
+          <p class="site-footer__heading">Services</p>
+          <a href="#" data-page="services">AI & Automation</a>
+          <a href="#" data-page="services">WhatsApp API</a>
+          <a href="#" data-page="services">Identity & Branding</a>
+          <a href="#" data-page="services">Full Stack Applications</a>
+        </nav>
+        <div class="site-footer__contact">
+          <p class="site-footer__heading">Get in Touch</p>
+          <a href="tel:+916360334274">+91 6360 334 274</a>
+          <a href="#" data-whatsapp>WhatsApp</a>
+          <p class="site-footer__note">Response within 24 business hours</p>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>© 2026 WEBXAI. All rights reserved.</p>
+        <p class="site-footer__credit">Engineered with precision.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" data-whatsapp data-whatsapp-use-form class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.883 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Netlify local state
+.netlify/
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Local dev screenshots (keep assets/images in repo)
+/Screenshot*.png
+hero.png
